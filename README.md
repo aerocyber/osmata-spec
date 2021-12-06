@@ -69,6 +69,7 @@ Apart from `Omio Spec version`, none of the others are mandatory.
 - `Name`:: Required:: Name given to the mapped URL
 - `Url`:: Required:: Url to be osmated
 - `Category`:: Optional:: For sorting in supported apps, Category contains list of string
+- `Date`:: Optional:: If present, use the date for converting to HTML and vise versa. If not, use current system date.
 
 ### Footer
 
