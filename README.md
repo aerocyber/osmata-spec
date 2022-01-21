@@ -25,54 +25,35 @@ osmata-spec
 
 ```json
 {
-    "Header" : {
-        "Program Name": "string",
-        "Program version": "string",
-        "Omio Spec version": "string",
-        "Additional info": "Map"
+    "Header": {
+      "Omio Version": "2.0",
+      "Restricted": "true if omio is password protected: <bool>",
+      "Password Hash": "Empty if omio is not password protected: <string>",
     },
-    "Data": {
-        [
-            {
-                "Name": "string",
-                "Url": "string",
-                "Category": "Array of string"
-            },
-            "..."
-        ]
-    },
+    "Data": "JSON string of following format: <string> (see note)",
     "Footer": {
-        "Last Modified On": "string",
-        "Last Modified At": "string",
-        "Omio Author": "string"
-    }
+      "End of DB": true,
+    },
+  };
+```
+
+Note:
+
+- `Omio Version` is the version of omio file format.
+- `Restricted` is `true` if omio is password protected.
+- `Password hash` is the SHA256 hash of the password.
+- `Data` is a JSON string of following format:
+
+```json
+{
+  "<Name>": {
+    "URL": "<URL>::<string>",
+    "Category": "<Category>::<Array of string>"
+  }
+ ...
 }
 ```
 
+- `End of DB` is `true` to indicate the end of file.
+
 This omio spec is divided into three sections:
-
-- Header
-- Data
-- Footer
-
-### Header
-
-Apart from `Omio Spec version`, none of the others are mandatory.
-
-- `Program Name`:: Optional:: Name of the program with which omio is written.
-- `Program version`:: Optional:: Version of the program with which the omio is written.
-- `Omio Spec version`:: Required:: The omio format version.
-- `Additional info`:: Optional with **NO RECOMMENDATION OF PERSONAL DETAILS**:: Additional program specific details.
-
-### Data
-
-- `Name`:: Required:: Name given to the mapped URL
-- `Url`:: Required:: Url to be osmated
-- `Category`:: Optional:: For sorting in supported apps, Category contains list of string
-- `Date`:: Optional:: If present, use the date for converting to HTML and vise versa. If not, use current system date.
-
-### Footer
-
-- `Last Modified On`:: Optional:: Last Date at which the omio was modified
-- `Last Modified At`:: Optional:: Last Time at which the omio was modified
-- `Omio Author`:: Optional:: Name of the person who actually created the omio file
