@@ -55,5 +55,3 @@ Note:
 ```
 
 - `End of DB` is `true` to indicate the end of file.
-
-This omio spec is divided into three sections:
