@@ -27,8 +27,6 @@ osmata-spec
 {
     "Header": {
       "Omio Version": "2.0",
-      "Restricted": "true if omio is password protected: <bool>",
-      "Password Hash": "Empty if omio is not password protected: <string>",
       "Extra Data": "Extra data to be added: <dict>"
     },
     "Data": "JSON string of following format: <string> (see note)",
@@ -41,8 +39,6 @@ osmata-spec
 Note:
 
 - `Omio Version` is the version of omio file format.
-- `Restricted` is `true` if omio is password protected.
-- `Password hash` is the SHA256 hash of the password.
 - `Data` is a JSON string of following format:
 
 ```json
