@@ -6,7 +6,7 @@ This repository contains information about omio file format and a checker for om
 
 Osmata stores all the osmations (technical name of bookmarks in Osmata) in a file with the extension `.omio`.
 
-This is version **2.0.0**
+This is version **2.0.1**
 
 ## License
 
