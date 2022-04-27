@@ -33,7 +33,7 @@ osmata-spec
     "Footer": {
       "End of DB": true,
     },
-  };
+  }
 ```
 
 Note:
@@ -46,7 +46,7 @@ Note:
   "<Name>": {
     "URL": "<URL>::<string>",
     "Category": "<Category>::<Array of string>"
-  }
+  },
  ...
 }
 ```
