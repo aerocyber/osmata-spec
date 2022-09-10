@@ -1,6 +1,6 @@
 # omio specification
 
-This repository contains information about omio file format and a checker for omio format compatibility.
+This repository contains information about omio file format and a validator for omio format compatibility.
 
 ## About omio
 
@@ -15,6 +15,7 @@ osmata-spec
 
 ## Links
 
+[omio file validator](https://aerocyber.github.io/osmata-spec/tester)
 [My profile](https://github.com/aerocyber)
 
 [Project page](https://aerocyber.github.io/osmata-spec)
