@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmata Spec Checker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit-icons.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <noscript>
+        <h1 style="color: blue;background-color:red;">Unsupported Browser</h1>
+        <p>The browser you are using either doesn't allow JavaScript or JavaScript has been disabled. Switch to a
+            supported browser or turn on JavaScript for this page. <br>
+            Supported browsers:<br>
+            <ul>
+                <li>Mozilla Firefox: <a href="https://firefox.com">https://firefox.com</a></li>
+                <li>Google Chrome: <a href="https://google.com/chrome">https://google.com/chrome</a></li>
+            </ul>
+        </p>
+    </noscript>
+    <div class="container">
+        <div class="js-upload uk-background-muted" uk-form-custom>
+            <input type="file" accept=".omio" onchange="validateFile(this)">
+            <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
+        </div>
+        
+    </div>
+    <!-- This is a button toggling the modal -->
+<!-- <a type="button" uk-toggle="target: #modal-example"></a> -->
+
+
+<!-- <a href="#result" uk-toggle></a> -->
+
+<!-- This is the modal -->
+<div id="result" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Result</h2>
+        <p id="analysis-result"></p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">OK.</button>
+        </p>
+    </div>
+</div>
+</body>
+
+</html>
