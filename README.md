@@ -6,7 +6,7 @@ This repository contains information about omio file format and a checker for om
 
 Osmata stores all the osmations (technical name of bookmarks in Osmata) in a file with the extension `.omio`.
 
-This is version **2.0.1**
+This is version **3.0.0**
 
 ## License
 
@@ -25,15 +25,14 @@ osmata-spec
 
 ```json
 {
-    "Header": {
-      "Omio Version": "2.0",
-      "Extra Data": "Extra data to be added: <dict>"
-    },
-    "Data": "JSON string of following format: <string> (see note)",
-    "Footer": {
-      "End of DB": true,
-    },
+  "Header": {
+    "Omio Version": "3.0"
+  },
+  "Data": "JSON string of specific format: <string> (see note)",
+  "Footer": {
+    "End of DB": 'true',
   }
+}
 ```
 
 Note:
@@ -45,10 +44,11 @@ Note:
 {
   "<Name>": {
     "URL": "<URL>::<string>",
-    "Category": "<Category>::<Array of string>"
-  },
- ...
+    "Categories": "<Category>::<Array of string>"
+  }
 }
 ```
 
 - `End of DB` is `true` to indicate the end of file.
+- `<Name>` is to be replaced with the name of the item.
+- `<Name>` is of type `string`
