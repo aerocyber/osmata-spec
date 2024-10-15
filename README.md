@@ -1,12 +1,12 @@
 # omio specification
 
-This repository contains information about omio file format and a validator for omio format compatibility.
+This repository contains information about omio file format usd by Sitemarker.
 
 ## About omio
 
 Osmata stores all the osmations (technical name of bookmarks in Osmata) in a file with the extension `.omio`.
 
-This is version **3.0.0**
+This is version **4.0.0**
 
 ## License
 
@@ -14,8 +14,6 @@ osmata-spec
 © 2021 by aerocyber is licensed under CC BY 4.0
 
 ## Links
-
-[Omio file validator](https://aerocyber.github.io/osmata-spec/tester)
 
 [My profile](https://github.com/aerocyber)
 
@@ -28,29 +26,21 @@ osmata-spec
 ```json
 {
   "Header": {
-    "Omio Version": "3.0"
+    "Omio Version": "4.0.0",
+    "Data Hash": <SHA 256 hash of the Data section>,
+    "Record Count": <Number of records in Data section>,
+    "Last Accessed": <Date-time of when the file was last accessed>,
+    "Last modified": <Date-time of when the file was last modified>
   },
-  "Data": "JSON string of specific format: <string> (see note)",
-  "Footer": {
-    "End of DB": 'true',
+  "Data": {
+    <Name>: {
+      "URL": <Valid URL>,
+      "Categories": <Tags separated by comma(,)>,
+      "Added On": <Date-time of when the record was added>
+    }
+  }
+  "Omio Info": {
+    "Header Hash": <SHA 256 hash of the Header section>
   }
 }
 ```
-
-Note:
-
-- `Omio Version` is the version of omio file format.
-- `Data` is a JSON string of following format:
-
-```json
-{
-  "<Name>": {
-    "URL": "<URL>::<string>",
-    "Categories": "<Category>::<Array of string>"
-  }
-}
-```
-
-- `End of DB` is `true` to indicate the end of file.
-- `<Name>` is to be replaced with the name of the item.
-- `<Name>` is of type `string`
