@@ -4,7 +4,7 @@ This repository contains information about omio file format usd by Sitemarker.
 
 ## About omio
 
-Osmata stores all the osmations (technical name of bookmarks in Osmata) in a file with the extension `.omio`.
+The `.omio` file is used by [Sitemarker](https://aerocyber.github.io/sitemarker) for exporting records.
 
 This is version **4.0.0**
 
