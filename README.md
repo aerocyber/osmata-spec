@@ -26,10 +26,9 @@ osmata-spec
 ```json
 {
   "Header": {
-    "Omio Version": "4.1.0",
+    "Omio Version": "4.1.1",
     "Data Hash": <SHA 256 hash of the Data section>,
     "Record Count": <Number of records in Data section>,
-    "Last Accessed": <Timestamp of when the file was last accessed>,
     "Last modified": <Timestamp of when the file was last modified>
   },
   "Data": {
@@ -40,7 +39,7 @@ osmata-spec
     }
   }
   "Omio Info": {
-    "Header Hash": <SHA 256 hash of the Header section>
+    "Header Hash": <SHA 256 hash of the Header section treated as a json>
   }
 }
 ```
