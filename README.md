@@ -26,7 +26,7 @@ osmata-spec
 ```json
 {
   "Header": {
-    "Omio Version": "4.1.2",
+    "Omio Version": "4.2",
     "Data Hash": <SHA 256 hash of the Data section>,
     "Record Count": <Number of records in Data section>,
     "Created On": <Timestamp of when the file was created>
@@ -35,7 +35,8 @@ osmata-spec
     <Name>: {
       "URL": <Valid URL>,
       "Categories": <Tags separated by comma(,)>,
-      "Added On": <Date-time of when the record was added>
+      "Added On": <Date-time of when the record was added>,
+      "Notes": <Notes of the record, optional>
     }
   }
   "Omio Info": {
