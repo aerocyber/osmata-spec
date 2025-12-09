@@ -36,9 +36,16 @@ osmata-spec
       "URL": <Valid URL>,
       "Categories": <Tags separated by comma(,)>,
       "Added On": <Date-time of when the record was added>,
-      "Notes": <Notes of the record, optional>
+      "Notes": <Notes of the record, optional>,
+      "Parent Folder ID": <ID of the parent folder, optional>,
+    },
+  },
+  "Folders": {
+    <ID>: {
+      "Name": <Name of the folder>,
+      "Parent ID": <ID of the parent folder>,
     }
-  }
+  },
   "Omio Info": {
     "Header Hash": <SHA 256 hash of the Header section treated as a json>
   }
